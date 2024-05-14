@@ -3,22 +3,24 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SlotTestScripts : MonoBehaviour
+public class ResultGenerator
 {
     private int[] _indexes = new int[100];
-    [SerializeField] private CustomKeyValuePair<string, int>[] _results = new CustomKeyValuePair<string, int>[100];
+    [SerializeField] private CustomTuple<string, int>[] _results = new CustomTuple<string, int>[100];
     private Dictionary<int, (int, int)[]> _perToIntervalDict = new Dictionary<int, (int, int)[]>();
-    [SerializeField] private CustomKeyValuePair<string, int>[] _slotData;
-
-    public CustomKeyValuePair<string, int>[] Results { get => _results; private set => _results = value; }
-    public CustomKeyValuePair<string, int>[] SlotData { get => _slotData; private set => _slotData = value; }
-
+    [SerializeField] private CustomTuple<string, int>[] _slotData;
+    public CustomTuple<string, int>[] Results { get => _results; private set => _results = value; }
+    public CustomTuple<string, int>[] SlotData { get => _slotData; private set => _slotData = value; }
+    public ResultGenerator()
+    {
+        Awake();
+    }
     private void Awake()
     {
         SetIndexes();
-        GetSlotData(); 
+        GetSlotData();
+        Start();
     }
-
     private void SetIndexes()
     {
         for (int i = 0; i < _indexes.Length; i++)
@@ -44,27 +46,31 @@ public class SlotTestScripts : MonoBehaviour
         {
             PlaceResults(result);
         }
+
+        foreach (var item in _results)
+        {
+            Debug.Log(item.Key);
+        }
     }
     private void GetSlotData()
     {
-        SlotData = new CustomKeyValuePair<string, int>[]
+        SlotData = new CustomTuple<string, int>[]
         {
-            new CustomKeyValuePair<string, int>("A,Wild,Bonus", 13),
-            new CustomKeyValuePair<string, int>("Wild,Wild,Seven", 13),
-            new CustomKeyValuePair<string, int>("Jackpot,Jackpot,A", 13),
-            new CustomKeyValuePair<string, int>("Bonus,A,Jackpot", 13),
-            new CustomKeyValuePair<string, int>("Wild,Bonus,A", 13),
-            new CustomKeyValuePair<string, int>("A,A,A", 9),
-            new CustomKeyValuePair<string, int>("Bonus,Bonus,Bonus", 8),
-            new CustomKeyValuePair<string, int>("Seven,Seven,Seven", 7),
-            new CustomKeyValuePair<string, int>("Wild,Wild,Wild", 6),
-            new CustomKeyValuePair<string, int>("Jackpot,Jackpot,Jackpot", 5),
+            new CustomTuple<string, int>("A,Wild,Bonus", 13),
+            new CustomTuple<string, int>("Wild,Wild,Seven", 13),
+            new CustomTuple<string, int>("Jackpot,Jackpot,A", 13),
+            new CustomTuple<string, int>("Bonus,A,Jackpot", 13),
+            new CustomTuple<string, int>("Wild,Bonus,A", 13),
+            new CustomTuple<string, int>("A,A,A", 9),
+            new CustomTuple<string, int>("Bonus,Bonus,Bonus", 8),
+            new CustomTuple<string, int>("Seven,Seven,Seven", 7),
+            new CustomTuple<string, int>("Wild,Wild,Wild", 6),
+            new CustomTuple<string, int>("Jackpot,Jackpot,Jackpot", 5),
         };
     }
 
-    private void PlaceResults(CustomKeyValuePair<string, int> result)
+    private void PlaceResults(CustomTuple<string, int> result)
     {
-
         if (_perToIntervalDict.TryGetValue(result.Value, out (int, int)[] resultIntervals))
         {
             foreach (var interval in resultIntervals)
@@ -94,7 +100,7 @@ public class SlotTestScripts : MonoBehaviour
         if (availableIndexes.Count == 0)    
         {
             //Debug.LogError("No available index between " + range.Item1 + " and " + range.Item2);
-            Dictionary<int, CustomKeyValuePair<string, int>> _indexToResult = new Dictionary<int, CustomKeyValuePair<string, int>>();
+            Dictionary<int, CustomTuple<string, int>> _indexToResult = new Dictionary<int, CustomTuple<string, int>>();
             int heighestPer = GetHighestPer();
             for (int i = range.Item1; i <= range.Item2; i++)
             {
@@ -102,7 +108,6 @@ public class SlotTestScripts : MonoBehaviour
                 {
                     _indexToResult.Add(i, _results[i]);
                 }
-
             }
 
             var replace = _indexToResult.ElementAt(new System.Random().Next(_indexToResult.Count));
@@ -122,7 +127,7 @@ public class SlotTestScripts : MonoBehaviour
         }
         return heighestPer;
     }
-    private void ReplaceIndex(CustomKeyValuePair<string, int> replacingElement)
+    private void ReplaceIndex(CustomTuple<string, int> replacingElement)
     {
         List<int> emptyIndexes = new List<int>();
 
@@ -145,7 +150,7 @@ public class SlotTestScripts : MonoBehaviour
     /// This method calculates spin intervals based on a given percentage of the total spins. It ensures that the intervals
     /// are as balanced as possible, even if the total number of spins is not evenly divisible by the percentage.
     /// </remarks>
-    public (int, int)[] CalculateSpinIntervals(int percentage, int totalSpins = 100)
+    private (int, int)[] CalculateSpinIntervals(int percentage, int totalSpins = 100)
     {
         (int, int)[] resultIntervals = new (int, int)[percentage];
         int spinsPerInterval = totalSpins / percentage;
@@ -163,18 +168,6 @@ public class SlotTestScripts : MonoBehaviour
             resultIntervals[i] = (start, end);
             start = end + 1;
         }
-        //PrintIntervals(resultIntervals);
         return resultIntervals;
     }
-}
-
-[System.Serializable]
-public class CustomKeyValuePair<K,V>
-{
-    public CustomKeyValuePair(K key, V value)
-    {
-        Key = key; Value = value;
-    }
-    public K Key;
-    public V Value;
 }

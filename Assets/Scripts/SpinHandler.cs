@@ -13,17 +13,18 @@ public class SpinHandler
     public string GetNextSpinResult()
     {
         _currentSpin++;
-        if (_currentSpin >= _spinResults.Length - 1)
+        if (_currentSpin > _spinResults.Length - 1)
         {
             AllSpinResultsDone?.Invoke();
+            RefreshSpinResults();
         }
         JsonSaver.SaveData(_currentSpin, JsonSaver.CURRENT_SPIN_FILE_PATH);
         return _spinResults[_currentSpin].ResultName;
     }
-    public void SetNewSpinResults(ResultData[] newSpinResults)
+    public void RefreshSpinResults()
     {
-        _spinResults = newSpinResults;
-        _currentSpin = -1; // Reset Current Spin
+        _spinResults = JsonSaver.LoadData<ResultData[]>(JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
+        _currentSpin = 0; // Reset Current Spin
         SaveCurrentData();
     }
 

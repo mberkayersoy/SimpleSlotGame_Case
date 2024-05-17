@@ -1,6 +1,4 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,11 +7,16 @@ public class UISlotSymbolBehaviour : MonoBehaviour
     [SerializeField] private Sprite _sharpSprite;
     [SerializeField] private Sprite _blurSprite;
     [SerializeField] private int _symbolID;
-    [SerializeField] private float _speed;
+    public float _targetY;
     private Image _image;
     private RectTransform _parentRectTransform;
     private RectTransform _rectTransform;
+    private Tween _spinTween;
+    private bool _slowDown;
+    private float _tweenTimeFactor = 0.1f;
     public int SymbolID { get => _symbolID; private set => _symbolID = value; }
+    public Tween SpinTween { get => _spinTween; set => _spinTween = value; }
+    public float TargetY { get => _targetY; set => _targetY = value; }
 
     private void Awake()
     {
@@ -21,28 +24,58 @@ public class UISlotSymbolBehaviour : MonoBehaviour
         _parentRectTransform = transform.parent.GetComponent<RectTransform>();
         _rectTransform = GetComponent<RectTransform>();
     }
-
-    public void Initialize(int symbolID, Sprite sharp, Sprite blur, float speed)
+    public void Initialize(SlotSymbolData slotSymbolData)
     {
-        _symbolID = symbolID;
-        _sharpSprite = sharp;
-        _blurSprite = blur;
-        _speed = speed;
+        _symbolID = slotSymbolData.ID;
+        _sharpSprite = Resources.Load<Sprite>(slotSymbolData.SharpSpritePath);
+        _blurSprite = Resources.Load<Sprite>(slotSymbolData.BlurSpritePath);
+        UpdateSymbolImage(false);
     }
-    private void UpdateSymbolImage()
+    private void UpdateSymbolImage(bool isSpinning)
     {
-        _image.sprite = _blurSprite;
+        _image.sprite = isSpinning ? _blurSprite : _sharpSprite;
+    }
+    public void StopMovement()
+    {
+        _image.sprite = _sharpSprite;
+        _spinTween = null;
+        _spinTween.Kill(true);
+        _slowDown = false;
     }
 
-    private void FixedUpdate()
+    public void SlowDownTween(float tweenTimeFactor)
     {
-        _rectTransform.position += Vector3.down * Time.fixedDeltaTime * _speed;
+        _slowDown = true;
+        _tweenTimeFactor = tweenTimeFactor;
+        UpdateSymbolImage(!_slowDown);
+    }
+    public void ControlMovement(float duration, bool isSpinning)
+    {
+        UpdateSymbolImage(isSpinning);
+        ControlAnimation(duration, isSpinning);
+    }
+    private void ControlAnimation(float duration, bool isSpinning = true)
+    {
+        float endYPosition = _rectTransform.rect.yMin;
+        float targetPos = _rectTransform.anchoredPosition.y - _rectTransform.rect.size.y;
+        _targetY = targetPos;
 
-        if (_rectTransform.anchoredPosition.y <= _parentRectTransform.rect.yMin)
-        {
-            float newYPosition = _parentRectTransform.rect.yMax; //- _rectTransform.rect.height / 2;
-            _rectTransform.anchoredPosition = new Vector2(_rectTransform.anchoredPosition.x, newYPosition);
-        }
-        
+        _spinTween = _rectTransform.DOAnchorPosY(targetPos, duration)
+            .SetEase(Ease.Linear)
+            .OnComplete(() =>
+            {
+                if (_rectTransform.anchoredPosition.y <= _parentRectTransform.rect.yMin)
+                {   // Reset position and continue spinning
+                    float newYPosition = _parentRectTransform.rect.yMax - _rectTransform.rect.height / 2;
+                    _rectTransform.anchoredPosition = new Vector2(_rectTransform.anchoredPosition.x, newYPosition);
+                }
+                if (_spinTween != null)
+                {
+                    ControlAnimation(duration);
+                }
+            });
+
+        _spinTween.timeScale = _slowDown ? _tweenTimeFactor : 1f;
     }
 }
+

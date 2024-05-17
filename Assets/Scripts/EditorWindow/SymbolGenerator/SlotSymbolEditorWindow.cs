@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -69,7 +70,6 @@ public class SlotSymbolEditorWindow : EditorWindow
             EditorGUILayout.LabelField("Sharp Path: " + pair.Value.SharpSpritePath);
             EditorGUILayout.LabelField("Blur Path: " + pair.Value.BlurSpritePath);
 
-            // Add remove button
             if (GUILayout.Button("-", GUILayout.Width(25)))
             {
                 RemoveData(pair.Key);
@@ -95,7 +95,6 @@ public class SlotSymbolEditorWindow : EditorWindow
 
     private void TryAddData()
     {
-        // Check if the new key is valid
         int key;
         if (!int.TryParse(_newKey, out key))
         {
@@ -122,3 +121,4 @@ public class SlotSymbolEditorWindow : EditorWindow
         _newBlurSpritePath = "";
     }
 }
+#endif

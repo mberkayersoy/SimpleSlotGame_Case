@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7780167330143203326}
   - component: {fileID: 4321682503269893397}
+  - component: {fileID: 5551876681111229160}
+  - component: {fileID: 1941180276372456003}
   m_Layer: 0
   m_Name: Poolable_Container
   m_TagString: Untagged
@@ -44,3 +46,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee63f591dc1087a4ab4f47137d0e78c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5551876681111229160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8055917217894205460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08eca9f7688a0a24685b89133b020c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers: []
+  _installerPrefabs: []
+  _autoRun: 1
+  _kernel: {fileID: 0}
+--- !u!114 &1941180276372456003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8055917217894205460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717a02054ef2699498e6bd4234fd7995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _containerSource: 0

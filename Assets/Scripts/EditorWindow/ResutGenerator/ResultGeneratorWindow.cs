@@ -1,4 +1,6 @@
+#if UNITY_EDITOR
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
@@ -140,7 +142,12 @@ public class ResultGeneratorWindow : EditorWindow
             return;
         }
         SlotSymbolData[] resultOfSymbols = GetResultOfSymbols();
-        ResultData newResult = new ResultData(_newResultChancePer, resultOfSymbols, SetName(resultOfSymbols), SetID(resultOfSymbols));
+        ResultData newResult = new ResultData(_newResultChancePer, 
+                                              resultOfSymbols, 
+                                              SetName(resultOfSymbols), 
+                                              SetID(resultOfSymbols),
+                                              CheckAllSymbolsSameID(resultOfSymbols),
+                                              CheckIsDelayNeeded(resultOfSymbols));
         _createdResultsDic.Add(_newResultID, newResult);
 
         ClearInputFields();
@@ -154,6 +161,26 @@ public class ResultGeneratorWindow : EditorWindow
             resultSymbolsData[i] = _symbolDataDic[symbolID];
         }
         return resultSymbolsData;
+    }
+    private bool CheckAllSymbolsSameID(SlotSymbolData[] resultSymbols)
+    {
+        if (resultSymbols == null || resultSymbols.Length <= 1)
+        {
+            return false;
+        }
+
+        int[] symbolIDs = resultSymbols.Select(symbol => symbol.ID).ToArray();
+
+        return symbolIDs.All(id => id == symbolIDs[0]);
+    }
+    public bool CheckIsDelayNeeded(SlotSymbolData[] resultSymbols)
+    {
+        if (resultSymbols != null && resultSymbols.Length >= 2)
+        {
+            return resultSymbols[0].ID == resultSymbols[1].ID;
+        }
+
+        return false;
     }
     private string SetID(SlotSymbolData[] resultSymbols)
     {
@@ -183,3 +210,4 @@ public class ResultGeneratorWindow : EditorWindow
         _newResultChancePer = 0;
     }
 }
+#endif

@@ -1,0 +1,32 @@
+{
+  "0": {
+    "Name": "A",
+    "ID": 0,
+    "SharpSpritePath": "Sprites/A_00",
+    "BlurSpritePath": "Sprites/A_00_blur"
+  },
+  "1": {
+    "Name": "Bonus",
+    "ID": 1,
+    "SharpSpritePath": "Sprites/Bonus_00",
+    "BlurSpritePath": "Sprites/Bonus_00_blur"
+  },
+  "2": {
+    "Name": "Jackpot",
+    "ID": 2,
+    "SharpSpritePath": "Sprites/Jackpot_00",
+    "BlurSpritePath": "Sprites/Jackpot_00_blur"
+  },
+  "3": {
+    "Name": "Seven",
+    "ID": 3,
+    "SharpSpritePath": "Sprites/Seven_00",
+    "BlurSpritePath": "Sprites/Seven_00_blur"
+  },
+  "4": {
+    "Name": "Wild",
+    "ID": 4,
+    "SharpSpritePath": "Sprites/Wild_00",
+    "BlurSpritePath": "Sprites/Wild_00_blur"
+  }
+}

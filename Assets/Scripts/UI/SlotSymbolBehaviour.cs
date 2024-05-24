@@ -1,4 +1,6 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using System.Collections;
 using UnityEngine;
 
 public class SlotSymbolBehaviour : MonoBehaviour
@@ -11,15 +13,14 @@ public class SlotSymbolBehaviour : MonoBehaviour
     private Transform _upperTarget;
     private SpriteRenderer _spriteRenderer;
     private Tween _spinTween;
-    private bool _slowDown;
-    private float _tweenTimeFactor = 0.1f;
+    private bool _isSpinning;
+    private float _tweenTimeScale;
     public int SymbolID { get => _symbolID; private set => _symbolID = value; }
     public float TargetY { get => _targetY; set => _targetY = value; }
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
-
     }
     public void Initialize(SlotSymbolData slotSymbolData, Transform bottomTarget, Transform upperTarget)
     {
@@ -39,23 +40,41 @@ public class SlotSymbolBehaviour : MonoBehaviour
         _spriteRenderer.sprite = _sharpSprite;
         _spinTween = null;
         _spinTween.Kill(true);
-        _slowDown = false;
+        _isSpinning = false;
+        _tweenTimeScale = 1f;
     }
-
-    public void SlowDownTween(float tweenTimeFactor)
+    public async UniTaskVoid SetSlowDown(float targetTimeScale)
     {
-        _slowDown = true;
-        _tweenTimeFactor = tweenTimeFactor;
-        UpdateSymbolImage(!_slowDown);
+        _isSpinning = false;
+        UpdateSymbolImage(_isSpinning);
+        float startFactor = 1f;
+        float duration = 1f;
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            _tweenTimeScale = Mathf.Lerp(startFactor, targetTimeScale, elapsed / duration);
+            if (_spinTween != null)
+            {
+                _spinTween.timeScale = _tweenTimeScale;
+            }
+            elapsed += Time.deltaTime;
+            await UniTask.Yield(PlayerLoopTiming.Update);
+        }
+
+        _tweenTimeScale = targetTimeScale;
+        if (_spinTween != null)
+        {
+            _spinTween.timeScale = _tweenTimeScale;
+        }
     }
     public void ControlMovement(float duration, bool isSpinning)
     {
-        UpdateSymbolImage(isSpinning);
+        _isSpinning = isSpinning;
+        UpdateSymbolImage(_isSpinning);
         ControlAnimation(duration);
     }
     private void ControlAnimation(float duration)
     {
-        //float endYPosition = _spriteRenderer.bounds.size.y;
         float targetPos = transform.position.y - _spriteRenderer.bounds.size.y;
         _targetY = targetPos;
 
@@ -65,7 +84,7 @@ public class SlotSymbolBehaviour : MonoBehaviour
             {
                 if (transform.position.y < _bottomTarget.transform.position.y)
                 {   // Reset position and continue spinning
-                    float newYPosition = _upperTarget.position.y; //- _spriteRenderer.bounds.size.y / 2;
+                    float newYPosition = _upperTarget.position.y;
                     transform.position = new Vector2(transform.position.x, newYPosition);
                 }
                 if (_spinTween != null)
@@ -74,7 +93,7 @@ public class SlotSymbolBehaviour : MonoBehaviour
                 }
             });
 
-        _spinTween.timeScale = _slowDown ? _tweenTimeFactor : 1f;
+        _spinTween.timeScale = _isSpinning ? 1f : _tweenTimeScale;
     }
 }
 

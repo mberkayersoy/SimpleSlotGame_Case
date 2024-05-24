@@ -1,5 +1,31 @@
 [
   {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Seven",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
     "ChancePer": 7,
     "ResultSymbolsData": [
       {
@@ -22,35 +48,7 @@
       }
     ],
     "ResultName": "Seven-Seven-Seven",
-    "ResultID": "333",
     "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
     "IsDelayNeeded": true
   },
   {
@@ -76,18 +74,17 @@
       }
     ],
     "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
   {
-    "ChancePer": 13,
+    "ChancePer": 9,
     "ResultSymbolsData": [
       {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
       },
       {
         "Name": "A",
@@ -96,16 +93,15 @@
         "BlurSpritePath": "Sprites/A_00_blur"
       },
       {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
       }
     ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
+    "ResultName": "A-A-A",
+    "IsPaying": true,
+    "IsDelayNeeded": true
   },
   {
     "ChancePer": 8,
@@ -130,8 +126,59 @@
       }
     ],
     "ResultName": "Bonus-Bonus-Bonus",
-    "ResultID": "111",
     "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
+    "IsPaying": false,
     "IsDelayNeeded": true
   },
   {
@@ -157,7 +204,6 @@
       }
     ],
     "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -184,9 +230,60 @@
       }
     ],
     "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
     "IsPaying": false,
     "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "A-Wild-Bonus",
+    "IsPaying": false,
+    "IsDelayNeeded": false
   },
   {
     "ChancePer": 6,
@@ -211,24 +308,23 @@
       }
     ],
     "ResultName": "Wild-Wild-Wild",
-    "ResultID": "444",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
   {
-    "ChancePer": 9,
+    "ChancePer": 13,
     "ResultSymbolsData": [
       {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
       },
       {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
       },
       {
         "Name": "A",
@@ -237,9 +333,112 @@
         "BlurSpritePath": "Sprites/A_00_blur"
       }
     ],
-    "ResultName": "A-A-A",
-    "ResultID": "000",
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 8,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-Bonus-Bonus",
     "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
+    "IsPaying": false,
     "IsDelayNeeded": true
   },
   {
@@ -265,89 +464,7 @@
       }
     ],
     "ResultName": "Jackpot-Jackpot-Jackpot",
-    "ResultID": "222",
     "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
-    "IsPaying": false,
     "IsDelayNeeded": true
   },
   {
@@ -373,7 +490,32 @@
       }
     ],
     "ResultName": "A-A-A",
-    "ResultID": "000",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 7,
+    "ResultSymbolsData": [
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Seven-Seven-Seven",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -381,37 +523,10 @@
     "ChancePer": 13,
     "ResultSymbolsData": [
       {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
       },
       {
         "Name": "Wild",
@@ -420,68 +535,13 @@
         "BlurSpritePath": "Sprites/Wild_00_blur"
       },
       {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
       }
     ],
-    "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
+    "ResultName": "Wild-Wild-Seven",
     "IsPaying": false,
     "IsDelayNeeded": true
   },
@@ -508,7 +568,32 @@
       }
     ],
     "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -535,252 +620,8 @@
       }
     ],
     "ResultName": "Wild-Wild-Wild",
-    "ResultID": "444",
     "IsPaying": true,
     "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 8,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-Bonus-Bonus",
-    "ResultID": "111",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 7,
-    "ResultSymbolsData": [
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Seven-Seven-Seven",
-    "ResultID": "333",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
-    "IsPaying": false,
-    "IsDelayNeeded": false
   },
   {
     "ChancePer": 13,
@@ -805,7 +646,6 @@
       }
     ],
     "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -832,61 +672,6 @@
       }
     ],
     "ResultName": "Jackpot-Jackpot-Jackpot",
-    "ResultID": "222",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 9,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "A-A-A",
-    "ResultID": "000",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 8,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-Bonus-Bonus",
-    "ResultID": "111",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -894,6 +679,12 @@
     "ChancePer": 13,
     "ResultSymbolsData": [
       {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
         "Name": "Bonus",
         "ID": 1,
         "SharpSpritePath": "Sprites/Bonus_00",
@@ -904,16 +695,9 @@
         "ID": 0,
         "SharpSpritePath": "Sprites/A_00",
         "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
       }
     ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
+    "ResultName": "Wild-Bonus-A",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -940,7 +724,6 @@
       }
     ],
     "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
     "IsPaying": false,
     "IsDelayNeeded": true
   },
@@ -967,9 +750,34 @@
       }
     ],
     "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
     "IsPaying": false,
     "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
+    "IsPaying": false,
+    "IsDelayNeeded": true
   },
   {
     "ChancePer": 13,
@@ -994,13 +802,18 @@
       }
     ],
     "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
     "IsPaying": false,
     "IsDelayNeeded": true
   },
   {
     "ChancePer": 13,
     "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
       {
         "Name": "Wild",
         "ID": 4,
@@ -1012,6 +825,26 @@
         "ID": 1,
         "SharpSpritePath": "Sprites/Bonus_00",
         "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "A-Wild-Bonus",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 9,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
       },
       {
         "Name": "A",
@@ -1020,35 +853,7 @@
         "BlurSpritePath": "Sprites/A_00_blur"
       }
     ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 6,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Wild",
-    "ResultID": "444",
+    "ResultName": "A-A-A",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -1075,9 +880,60 @@
       }
     ],
     "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
     "IsPaying": false,
     "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "A-Wild-Bonus",
+    "IsPaying": false,
+    "IsDelayNeeded": false
   },
   {
     "ChancePer": 8,
@@ -1102,7 +958,58 @@
       }
     ],
     "ResultName": "Bonus-Bonus-Bonus",
-    "ResultID": "111",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 9,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "A-A-A",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -1129,7 +1036,84 @@
       }
     ],
     "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "A-Wild-Bonus",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
     "IsPaying": false,
     "IsDelayNeeded": true
   },
@@ -1156,143 +1140,7 @@
       }
     ],
     "ResultName": "Seven-Seven-Seven",
-    "ResultID": "333",
     "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 9,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "A-A-A",
-    "ResultID": "000",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
     "IsDelayNeeded": true
   },
   {
@@ -1318,7 +1166,6 @@
       }
     ],
     "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
     "IsPaying": false,
     "IsDelayNeeded": true
   },
@@ -1345,88 +1192,6 @@
       }
     ],
     "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 7,
-    "ResultSymbolsData": [
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Seven-Seven-Seven",
-    "ResultID": "333",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -1453,7 +1218,32 @@
       }
     ],
     "ResultName": "A-A-A",
-    "ResultID": "000",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 6,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Wild",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -1480,7 +1270,214 @@
       }
     ],
     "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Seven",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 8,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-Bonus-Bonus",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 5,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-Jackpot",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 7,
+    "ResultSymbolsData": [
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Seven-Seven-Seven",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "A-Wild-Bonus",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -1507,7 +1504,214 @@
       }
     ],
     "ResultName": "Wild-Wild-Wild",
-    "ResultID": "444",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 9,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "A-A-A",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 8,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-Bonus-Bonus",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Seven",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "A-Wild-Bonus",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 7,
+    "ResultSymbolsData": [
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Seven-Seven-Seven",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -1534,8 +1738,59 @@
       }
     ],
     "ResultName": "Jackpot-Jackpot-Jackpot",
-    "ResultID": "222",
     "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Seven",
+    "IsPaying": false,
     "IsDelayNeeded": true
   },
   {
@@ -1561,7 +1816,266 @@
       }
     ],
     "ResultName": "Bonus-Bonus-Bonus",
-    "ResultID": "111",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 9,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "A-A-A",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Seven",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "A-Wild-Bonus",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 8,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-Bonus-Bonus",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 9,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "A-A-A",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -1588,7 +2102,6 @@
       }
     ],
     "ResultName": "Seven-Seven-Seven",
-    "ResultID": "333",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -1615,790 +2128,6 @@
       }
     ],
     "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 9,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "A-A-A",
-    "ResultID": "000",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 5,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-Jackpot",
-    "ResultID": "222",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 9,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "A-A-A",
-    "ResultID": "000",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 6,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Wild",
-    "ResultID": "444",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 8,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-Bonus-Bonus",
-    "ResultID": "111",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 7,
-    "ResultSymbolsData": [
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Seven-Seven-Seven",
-    "ResultID": "333",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 8,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-Bonus-Bonus",
-    "ResultID": "111",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 9,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "A-A-A",
-    "ResultID": "000",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Jackpot-Jackpot-A",
-    "ResultID": "220",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "Jackpot",
-        "ID": 2,
-        "SharpSpritePath": "Sprites/Jackpot_00",
-        "BlurSpritePath": "Sprites/Jackpot_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -2425,34 +2154,6 @@
       }
     ],
     "ResultName": "Wild-Wild-Wild",
-    "ResultID": "444",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 7,
-    "ResultSymbolsData": [
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Seven-Seven-Seven",
-    "ResultID": "333",
     "IsPaying": true,
     "IsDelayNeeded": true
   },
@@ -2479,7 +2180,32 @@
       }
     ],
     "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Jackpot-Jackpot-A",
     "IsPaying": false,
     "IsDelayNeeded": true
   },
@@ -2506,7 +2232,6 @@
       }
     ],
     "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -2514,28 +2239,27 @@
     "ChancePer": 13,
     "ResultSymbolsData": [
       {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
       },
       {
         "Name": "Jackpot",
         "ID": 2,
         "SharpSpritePath": "Sprites/Jackpot_00",
         "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
       }
     ],
-    "ResultName": "Bonus-A-Jackpot",
-    "ResultID": "102",
+    "ResultName": "Jackpot-Jackpot-A",
     "IsPaying": false,
-    "IsDelayNeeded": false
+    "IsDelayNeeded": true
   },
   {
     "ChancePer": 13,
@@ -2560,7 +2284,292 @@
       }
     ],
     "ResultName": "A-Wild-Bonus",
-    "ResultID": "041",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Seven",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 8,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-Bonus-Bonus",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 6,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Wild",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Jackpot",
+        "ID": 2,
+        "SharpSpritePath": "Sprites/Jackpot_00",
+        "BlurSpritePath": "Sprites/Jackpot_00_blur"
+      }
+    ],
+    "ResultName": "Bonus-A-Jackpot",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Wild-Seven",
+    "IsPaying": false,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "Wild-Bonus-A",
+    "IsPaying": false,
+    "IsDelayNeeded": false
+  },
+  {
+    "ChancePer": 7,
+    "ResultSymbolsData": [
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      },
+      {
+        "Name": "Seven",
+        "ID": 3,
+        "SharpSpritePath": "Sprites/Seven_00",
+        "BlurSpritePath": "Sprites/Seven_00_blur"
+      }
+    ],
+    "ResultName": "Seven-Seven-Seven",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 9,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      }
+    ],
+    "ResultName": "A-A-A",
+    "IsPaying": true,
+    "IsDelayNeeded": true
+  },
+  {
+    "ChancePer": 13,
+    "ResultSymbolsData": [
+      {
+        "Name": "A",
+        "ID": 0,
+        "SharpSpritePath": "Sprites/A_00",
+        "BlurSpritePath": "Sprites/A_00_blur"
+      },
+      {
+        "Name": "Wild",
+        "ID": 4,
+        "SharpSpritePath": "Sprites/Wild_00",
+        "BlurSpritePath": "Sprites/Wild_00_blur"
+      },
+      {
+        "Name": "Bonus",
+        "ID": 1,
+        "SharpSpritePath": "Sprites/Bonus_00",
+        "BlurSpritePath": "Sprites/Bonus_00_blur"
+      }
+    ],
+    "ResultName": "A-Wild-Bonus",
     "IsPaying": false,
     "IsDelayNeeded": false
   },
@@ -2587,115 +2596,6 @@
       }
     ],
     "ResultName": "Jackpot-Jackpot-Jackpot",
-    "ResultID": "222",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Bonus-A",
-    "ResultID": "410",
-    "IsPaying": false,
-    "IsDelayNeeded": false
-  },
-  {
-    "ChancePer": 13,
-    "ResultSymbolsData": [
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Wild",
-        "ID": 4,
-        "SharpSpritePath": "Sprites/Wild_00",
-        "BlurSpritePath": "Sprites/Wild_00_blur"
-      },
-      {
-        "Name": "Seven",
-        "ID": 3,
-        "SharpSpritePath": "Sprites/Seven_00",
-        "BlurSpritePath": "Sprites/Seven_00_blur"
-      }
-    ],
-    "ResultName": "Wild-Wild-Seven",
-    "ResultID": "443",
-    "IsPaying": false,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 9,
-    "ResultSymbolsData": [
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      },
-      {
-        "Name": "A",
-        "ID": 0,
-        "SharpSpritePath": "Sprites/A_00",
-        "BlurSpritePath": "Sprites/A_00_blur"
-      }
-    ],
-    "ResultName": "A-A-A",
-    "ResultID": "000",
-    "IsPaying": true,
-    "IsDelayNeeded": true
-  },
-  {
-    "ChancePer": 8,
-    "ResultSymbolsData": [
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      },
-      {
-        "Name": "Bonus",
-        "ID": 1,
-        "SharpSpritePath": "Sprites/Bonus_00",
-        "BlurSpritePath": "Sprites/Bonus_00_blur"
-      }
-    ],
-    "ResultName": "Bonus-Bonus-Bonus",
-    "ResultID": "111",
     "IsPaying": true,
     "IsDelayNeeded": true
   }

@@ -2,26 +2,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using Zenject;
+using System;
+using Random = UnityEngine.Random;
 
-public class ReelsController : MonoBehaviour
+public class ReelsController : MonoBehaviour, ISpinState
 {
     [SerializeField] private ReelBehaviour[] _reels;
     [SerializeField] private float _totalSpinDuration;
     [SerializeField, Range(0f, 0.1f)] private float _stopDelayBetweenReels = 0.1f;
-    [SerializeField] private float _reelsSpinSpeed;
+    [SerializeField] private float _reelSymbolsTweenDuration;
 
-    [Inject] private SpinHandler _spinhandler;
-    public System.Action<bool> SpinDone;
+    [Inject] private ISpinHandler _spinhandler;
     private ResultData _currentResult;
     private const float MIN_START_DELAY = 0f;
     private const float MAX_START_DELAY = 0.1f;
     private const float MAX_DELAY_FOR_LAST_REAL = 2.25f;
     private const float MIN_DELAY_FOR_LAST_REAL = 1f;
-    public ResultData CurrentResult { get => _currentResult; private set => _currentResult = value; }
+
+    public event Action SpinStarted;
+    public event Action SpinFinished;
 
     void Start()
     {
-        _spinhandler.SpinedResult += SetReelsTarget;
+        _spinhandler.NextSpinResultConcluded += SetReelsTarget;
         foreach (var reel in _reels)
         {
             reel.Initialize(JsonSaver.LoadData<Dictionary<int, SlotSymbolData>>(JsonSaver.SYMBOL_DATA_PATH));
@@ -52,16 +55,18 @@ public class ReelsController : MonoBehaviour
             }
         }
         // Broadcast spin progress finish.
-        SpinDone?.Invoke(true);
+        SpinFinished?.Invoke();
     }
 
-    private async UniTask StartReelsMovement()
+    private async UniTaskVoid StartReelsMovement()
     {
+        SpinStarted?.Invoke();
+
         float randomDelay = Random.Range(MIN_START_DELAY, MAX_START_DELAY);
         foreach (var reel in _reels)
         {
             await UniTask.WaitForSeconds(randomDelay);
-            reel.StartSpinning(_reelsSpinSpeed);
+            reel.StartSpinning(_reelSymbolsTweenDuration);
         }
 
         await StopReels();
@@ -79,6 +84,6 @@ public class ReelsController : MonoBehaviour
 
     private void OnDestroy()
     {
-        _spinhandler.SpinedResult -= SetReelsTarget;
+        _spinhandler.NextSpinResultConcluded -= SetReelsTarget;
     }
 }

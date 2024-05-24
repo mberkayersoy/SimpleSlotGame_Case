@@ -1,31 +1,34 @@
 using System;
-using UnityEngine;
-
-public class SpinHandler
+public class SpinController : ISpinHandler
 {
     private int _currentSpin;
     private ResultData[] _spinResults;
-    public Action AllSpinResultsDone;
-    public Action<ResultData> SpinedResult;
-    public SpinHandler()
+
+    public event Action<ResultData> NextSpinResultConcluded;
+    public event Action AllSpinResultsDone;
+
+    public SpinController()
     {
         LoadSavedData();
     }
-    public void OnSpinResult()
+    public void OnNextSpinResult()
+    {
+        SetCurrentSpin();
+        NextSpinResultConcluded?.Invoke(_spinResults[_currentSpin]);
+        JsonSaver.SaveData(_currentSpin, JsonSaver.CURRENT_SPIN_FILE_PATH);
+    }
+    private void SetCurrentSpin()
     {
         _currentSpin++;
         if (_currentSpin > _spinResults.Length - 1)
         {
             AllSpinResultsDone?.Invoke();
-            RefreshSpinResults();
         }
-        SpinedResult?.Invoke(_spinResults[_currentSpin]);
-        JsonSaver.SaveData(_currentSpin, JsonSaver.CURRENT_SPIN_FILE_PATH);
     }
-    public void RefreshSpinResults()
+    public void SetNewSpinResults(ResultData[] newSpinResults, int currentSpin = -1)
     {
-        _spinResults = JsonSaver.LoadData<ResultData[]>(JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
-        _currentSpin = -1; // Reset Current Spin
+        _spinResults = newSpinResults;
+        _currentSpin = currentSpin;
         SaveCurrentData();
     }
 
@@ -34,7 +37,7 @@ public class SpinHandler
         _spinResults = JsonSaver.LoadData<ResultData[]>(JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
         _currentSpin = JsonSaver.LoadData<int>(JsonSaver.CURRENT_SPIN_FILE_PATH);
     }
-    public void SaveCurrentData()
+    private void SaveCurrentData()
     {
         JsonSaver.SaveData(_spinResults, JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
         JsonSaver.SaveData(_currentSpin, JsonSaver.CURRENT_SPIN_FILE_PATH);

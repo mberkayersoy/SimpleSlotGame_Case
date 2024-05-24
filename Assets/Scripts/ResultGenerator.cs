@@ -8,6 +8,9 @@ public class ResultGenerator
     private ResultData[] _allSpinResults = new ResultData[100];
     private Dictionary<int, (int, int)[]> _perToIntervalDict = new Dictionary<int, (int, int)[]>();
     private Dictionary<string, ResultData> _createdResultsDic;
+
+    public ResultData[] AllSpinResults { get => _allSpinResults; set => _allSpinResults = value; }
+
     public ResultGenerator()
     {
         _createdResultsDic = JsonSaver.LoadData<Dictionary<string, ResultData>>(JsonSaver.CREATED_RESULTS_FILE_PATH);

@@ -1,34 +1,41 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-public class UISpinButton : MonoBehaviour
+public class UISpinButton : MonoBehaviour, ISpinActivator
 {
     [SerializeField] private Button _spinButton;
-    public Action Spined;
-    [Inject] private SpinHandler _spinHandler;
-    [Inject] ReelsController _reelsController;
+    [Inject] private readonly ISpinState _spinState;
+
+    public event Action SpinRequested;
+
     private void Awake()
     {
         _spinButton.onClick.AddListener(OnClickSpinButton);
-        _reelsController.SpinDone += SetButtonInteraction;
+        _spinState.SpinFinished += ActivateButton;
+        _spinState.SpinStarted += DeActivateButton;
     }
     private void OnClickSpinButton()
     {
-        _spinHandler.OnSpinResult();
-        SetButtonInteraction(false);
+        SpinRequested?.Invoke();
     }
-
     private void SetButtonInteraction(bool canClick)
     {
         _spinButton.interactable = canClick;
     }
+    private void DeActivateButton()
+    {
+        SetButtonInteraction(false);
+    }
+    private void ActivateButton()
+    {
+        SetButtonInteraction(true);
+    }
     private void OnDestroy()
     {
         _spinButton.onClick.RemoveListener(OnClickSpinButton);
-        _reelsController.SpinDone -= SetButtonInteraction;
+        _spinState.SpinFinished -= ActivateButton;
+        _spinState.SpinStarted -= DeActivateButton;
     }
 }

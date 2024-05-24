@@ -1,6 +1,4 @@
 using MyExtensions.ObjectPool;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -17,7 +15,7 @@ public class PoolableCoinParticle : PoolableComponent
     {
         var emission = _particleSystem.emission;
 
-        float invertedBurstCount = 100f / Mathf.Clamp(burstCount, 1f, 100f);
+        float invertedBurstCount = 1000f / Mathf.Clamp(burstCount, 1f, 100f);
         var burst = new ParticleSystem.Burst(0.0f, (short)invertedBurstCount);
 
         emission.SetBursts(new ParticleSystem.Burst[] { burst });

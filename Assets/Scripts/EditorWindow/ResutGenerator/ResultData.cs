@@ -7,7 +7,6 @@ public class ResultData
     [Range(0, 100)] private int _chancePer;
     private SlotSymbolData[] _resultSymbolsData;
     private string _resultName;
-    private string _resultID;
     private bool _isPaying;
     private bool _delayNeeded;
     public int ChancePer { get => _chancePer; set => _chancePer = value; }
@@ -16,12 +15,11 @@ public class ResultData
     public bool IsPaying { get => _isPaying; private set => _isPaying = value; }
     public bool IsDelayNeeded { get => _delayNeeded; private set => _delayNeeded = value; }
 
-    public ResultData(int chancePer, SlotSymbolData[] resultSymbols, string resultName, string resultID, bool isPaying, bool isDelayNeeded)
+    public ResultData(int chancePer, SlotSymbolData[] resultSymbols, string resultName, bool isPaying, bool isDelayNeeded)
     {
         _chancePer = chancePer;
         _resultSymbolsData = resultSymbols;
         _resultName = resultName;
-        _resultID = resultID;
         _isPaying = isPaying;
         _delayNeeded = isDelayNeeded;
     }

@@ -12,7 +12,7 @@ public class ReelBehaviour : MonoBehaviour
     private SlotSymbolBehaviour _targetSymbol;
     private const float REEL_CENTER = 0f;
     
-    private const float SLOW_DOWN_FACTOR = 0.2f;
+    private const float SLOW_DOWN_FACTOR = 0.1f;
     private void Awake()
     {
         _symbols = GetComponentsInChildren<SlotSymbolBehaviour>();
@@ -50,7 +50,7 @@ public class ReelBehaviour : MonoBehaviour
     {
         foreach (var symbol in _symbols)
         {
-            symbol.SetSlowDown(SLOW_DOWN_FACTOR).Forget();
+            symbol.SetSlowDown(SLOW_DOWN_FACTOR, slowDownDuration).Forget();
             //symbol.SlowDownTween(SLOW_DOWN_FACTOR);
         }
         await UniTask.WaitForSeconds(slowDownDuration);

@@ -1,31 +1,34 @@
 using MyExtensions.ObjectPool;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
 public class PaymentController : MonoBehaviour
 {
     [SerializeField] private PoolableCoinParticle _coinPrefab;
-    [Inject] private ReelsController _reelsController;
+    [Inject] private ISpinState _spinState;
     [Inject] private PoolManager _poolManager;
-
+    [Inject] private ISpinHandler _iSpinResult;
+    private ResultData _currentResult;
     private void Awake()
     {
-        _reelsController.SpinDone += RewardPlayer;
+        _spinState.SpinFinished += RewardPlayer;
+        _iSpinResult.NextSpinResultConcluded += SpinHandler_NextSpinResultConcluded;
     }
-
-    private void RewardPlayer(bool spinDone)
+    private void SpinHandler_NextSpinResultConcluded(ResultData currentResult)
     {
-        if (_reelsController.CurrentResult.IsPaying)
+        _currentResult = currentResult;
+    }
+    private void RewardPlayer()
+    {
+        if (_currentResult.IsPaying)
         {
             var coin = _poolManager.Spawn(_coinPrefab, transform.position, transform.rotation);
-            coin.SetFrequency(_reelsController.CurrentResult.ChancePer);
+            coin.SetFrequency(_currentResult.ChancePer);
         }
     }
     private void OnDestroy()
     {
-        _reelsController.SpinDone -= RewardPlayer;
+        _spinState.SpinFinished -= RewardPlayer;
+        _iSpinResult.NextSpinResultConcluded -= SpinHandler_NextSpinResultConcluded;
     }
 }

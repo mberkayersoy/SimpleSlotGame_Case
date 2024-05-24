@@ -145,7 +145,6 @@ public class ResultGeneratorWindow : EditorWindow
         ResultData newResult = new ResultData(_newResultChancePer, 
                                               resultOfSymbols, 
                                               SetName(resultOfSymbols), 
-                                              SetID(resultOfSymbols),
                                               CheckAllSymbolsSameID(resultOfSymbols),
                                               CheckIsDelayNeeded(resultOfSymbols));
         _createdResultsDic.Add(_newResultID, newResult);
@@ -181,15 +180,6 @@ public class ResultGeneratorWindow : EditorWindow
         }
 
         return false;
-    }
-    private string SetID(SlotSymbolData[] resultSymbols)
-    {
-        StringBuilder id = new();
-        for (int i = 0; i < resultSymbols.Length; i++)
-        {
-            id.Append(resultSymbols[i].ID);
-        }
-        return id.ToString();
     }
     private string SetName(SlotSymbolData[] resultSymbols)
     {

@@ -1,6 +1,5 @@
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
-using System.Collections;
 using UnityEngine;
 
 public class SlotSymbolBehaviour : MonoBehaviour
@@ -37,18 +36,18 @@ public class SlotSymbolBehaviour : MonoBehaviour
     }
     public void StopMovement()
     {
-        _spriteRenderer.sprite = _sharpSprite;
         _spinTween = null;
         _spinTween.Kill(true);
         _isSpinning = false;
+        UpdateSymbolImage(_isSpinning);
         _tweenTimeScale = 1f;
     }
-    public async UniTaskVoid SetSlowDown(float targetTimeScale)
+    public async UniTaskVoid SetSlowDown(float targetTimeScale, float slowDownDuration)
     {
         _isSpinning = false;
         UpdateSymbolImage(_isSpinning);
         float startFactor = 1f;
-        float duration = 1f;
+        float duration = slowDownDuration;
         float elapsed = 0f;
         while (elapsed < duration)
         {

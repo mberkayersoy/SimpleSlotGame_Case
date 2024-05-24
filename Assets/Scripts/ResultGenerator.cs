@@ -1,15 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
-using Random = UnityEngine.Random;
-
+using System;
+using Random = System.Random;
 public class ResultGenerator
 {
     private int[] _indexes = new int[100];
-    [SerializeField] private ResultData[] _allSpinResults = new ResultData[100];
+    private ResultData[] _allSpinResults = new ResultData[100];
     private Dictionary<int, (int, int)[]> _perToIntervalDict = new Dictionary<int, (int, int)[]>();
     private Dictionary<string, ResultData> _createdResultsDic;
-    public ResultData[] SpinResults { get => _allSpinResults; private set => _allSpinResults = value; }
     public ResultGenerator()
     {
         _createdResultsDic = JsonSaver.LoadData<Dictionary<string, ResultData>>(JsonSaver.CREATED_RESULTS_FILE_PATH);
@@ -47,7 +45,6 @@ public class ResultGenerator
         JsonSaver.SaveData(_allSpinResults, JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
         _indexes = null;
     }
-
     private void PlaceResults(ResultData result)
     {
         if (_perToIntervalDict.TryGetValue(result.ChancePer, out (int, int)[] resultIntervals))
@@ -57,7 +54,7 @@ public class ResultGenerator
                 List<int> availableIndexes = GetAvailableIndexes(interval);
                 if (availableIndexes.Count > 0)
                 {
-                    int randomIndex = availableIndexes[Random.Range(0, availableIndexes.Count)];
+                    int randomIndex = availableIndexes[new Random().Next(0, availableIndexes.Count)];
                     _allSpinResults[randomIndex] = result;
                     _indexes[randomIndex] = -1;
                 }
@@ -65,7 +62,7 @@ public class ResultGenerator
         }
         else
         {
-            Debug.LogError("Key not found!");
+            Console.Error.WriteLine("Key not found!");
         }
     }
 
@@ -88,7 +85,7 @@ public class ResultGenerator
                 }
             }
 
-            var replace = _indexToResult.ElementAt(new System.Random().Next(_indexToResult.Count));
+            var replace = _indexToResult.ElementAt(new Random().Next(_indexToResult.Count));
             ReplaceIndex(replace.Value);
             availableIndexes.Add(replace.Key);
         }
@@ -114,7 +111,7 @@ public class ResultGenerator
                 emptyIndexes.Add(item);
             }
         }
-        int emptyty = Random.Range(0, emptyIndexes.Count);
+        int emptyty = new Random().Next(0, emptyIndexes.Count);
         _allSpinResults[emptyIndexes[emptyty]] = replacingElement;
         _indexes[emptyIndexes[emptyty]] = -1;
     }

@@ -10,7 +10,7 @@ public class UISpinButton : MonoBehaviour
     [SerializeField] private Button _spinButton;
     public Action Spined;
     [Inject] private SpinHandler _spinHandler;
-    [Inject] UIReelsController _reelsController;
+    [Inject] ReelsController _reelsController;
     private void Awake()
     {
         _spinButton.onClick.AddListener(OnClickSpinButton);

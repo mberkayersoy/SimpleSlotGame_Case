@@ -3,9 +3,9 @@ using UnityEngine;
 using Cysharp.Threading.Tasks;
 using Zenject;
 
-public class UIReelsController : MonoBehaviour
+public class ReelsController : MonoBehaviour
 {
-    [SerializeField] private UIReelBehaviour[] _reels;
+    [SerializeField] private ReelBehaviour[] _reels;
     [SerializeField] private float _totalSpinDuration;
     [SerializeField, Range(0f, 0.1f)] private float _stopDelayBetweenReels = 0.1f;
     [SerializeField] private float _reelsSpinSpeed;
@@ -17,7 +17,6 @@ public class UIReelsController : MonoBehaviour
     private const float MAX_START_DELAY = 0.1f;
     private const float MAX_DELAY_FOR_LAST_REAL = 2.25f;
     private const float MIN_DELAY_FOR_LAST_REAL = 1f;
-
     public ResultData CurrentResult { get => _currentResult; private set => _currentResult = value; }
 
     void Start()

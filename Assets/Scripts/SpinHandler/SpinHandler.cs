@@ -33,7 +33,6 @@ public class SpinHandler
     {
         _spinResults = JsonSaver.LoadData<ResultData[]>(JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
         _currentSpin = JsonSaver.LoadData<int>(JsonSaver.CURRENT_SPIN_FILE_PATH);
-        Debug.Log(_currentSpin);
     }
     public void SaveCurrentData()
     {

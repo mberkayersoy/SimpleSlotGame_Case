@@ -8,7 +8,7 @@ using Zenject;
 public class PaymentController : MonoBehaviour
 {
     [SerializeField] private PoolableCoinParticle _coinPrefab;
-    [Inject] private UIReelsController _reelsController;
+    [Inject] private ReelsController _reelsController;
     [Inject] private PoolManager _poolManager;
 
     private void Awake()

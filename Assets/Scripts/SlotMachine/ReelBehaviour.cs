@@ -51,7 +51,6 @@ public class ReelBehaviour : MonoBehaviour
         foreach (var symbol in _symbols)
         {
             symbol.SetSlowDown(SLOW_DOWN_FACTOR, slowDownDuration).Forget();
-            //symbol.SlowDownTween(SLOW_DOWN_FACTOR);
         }
         await UniTask.WaitForSeconds(slowDownDuration);
         StopSpinAtTarget().Forget();

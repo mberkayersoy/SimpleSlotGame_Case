@@ -1,12 +1,8 @@
 using UnityEngine;
 using Zenject;
 
-public class ISpinResultInstaller : MonoInstaller<ISpinResultInstaller>
+public class ISpinHandlerInstaller : MonoInstaller<ISpinHandlerInstaller>
 {
-    //public override void InstallBindings()
-    //{
-    //    Container.Bind<SpinHandler>().AsSingle();
-    //}
     public override void InstallBindings()
     {
         Container.Bind<SpinController>().AsSingle();

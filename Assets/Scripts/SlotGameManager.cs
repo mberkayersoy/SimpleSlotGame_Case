@@ -1,36 +1,41 @@
 using System.IO;
 using UnityEngine;
 using Zenject;
+using System.Collections.Generic;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 public class SlotGameManager : MonoBehaviour
 {
-    private ResultGenerator _resultgenerator;
-    [Inject] private ISpinHandler _spinhandler;
-    [Inject] private IGameExit _gameExit;
+    private ResultGenerator _resultGenerator;
+
+    private IDataService _dataService;
+    [Inject] private ISpinHandler _spinHandler;
+    [Inject] private IGameExit _iGameExit;
     [Inject] private ISpinActivator _spinActivator;
-    private void Awake()
+    private void Start()
     {
-        if (!File.Exists(JsonSaver.ALL_SPIN_RESULTS_FILE_PATH))
+        _dataService = new JsonDataService();
+        if (!_dataService.CheckFileExistince(GameConstantData.ALL_SPIN_RESULTS_FILE_PATH))
         {
-            _resultgenerator = new ResultGenerator();
-            _spinhandler.SetNewSpinResults(_resultgenerator.AllSpinResults, -1);
+            _resultGenerator = new ResultGenerator(_dataService.LoadData<Dictionary<string, ResultData>>(GameConstantData.CREATED_RESULTS_FILE_PATH));
+            _dataService.SaveData(GameConstantData.ALL_SPIN_RESULTS_FILE_PATH, _resultGenerator.AllSpinResults);
+            _spinHandler.SetSpinResults(_resultGenerator.AllSpinResults, -1);
 
         }
-        _spinhandler.AllSpinResultsDone += CreateNewSpinResults;
+        _spinHandler.AllSpinResultsDone += CreateNewSpinResults;
         _spinActivator.SpinRequested += GetNextSpinResult;
-        _gameExit.GameExited += ExitGame;
+        _iGameExit.GameExited += ExitGame;
     }
 
     private void GetNextSpinResult()
     {
-        _spinhandler.OnNextSpinResult();
+        _spinHandler.OnNextSpinResult();
     }
     private void CreateNewSpinResults()
     {
-        _resultgenerator = new ResultGenerator();
-        _spinhandler.SetNewSpinResults(_resultgenerator.AllSpinResults, -1);
+        _resultGenerator = new ResultGenerator(_dataService.LoadData<Dictionary<string, ResultData>>(GameConstantData.CREATED_RESULTS_FILE_PATH));
+        _spinHandler.SetSpinResults(_resultGenerator.AllSpinResults, 0);
     }
     private void ExitGame()
     {
@@ -40,11 +45,10 @@ public class SlotGameManager : MonoBehaviour
         Application.Quit();
 #endif
     }
-
     private void OnDestroy()
     {
-        _spinhandler.AllSpinResultsDone -= CreateNewSpinResults;
+        _spinHandler.AllSpinResultsDone -= CreateNewSpinResults;
         _spinActivator.SpinRequested -= GetNextSpinResult;
-        _gameExit.GameExited -= ExitGame;
+        _iGameExit.GameExited -= ExitGame;
     }
 }

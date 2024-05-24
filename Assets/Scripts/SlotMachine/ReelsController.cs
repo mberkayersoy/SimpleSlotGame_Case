@@ -13,6 +13,8 @@ public class ReelsController : MonoBehaviour, ISpinState
     [SerializeField] private float _reelSymbolsTweenDuration;
 
     [Inject] private ISpinHandler _spinhandler;
+
+    private IDataService _dataService;
     private ResultData _currentResult;
     private const float MIN_START_DELAY = 0f;
     private const float MAX_START_DELAY = 0.1f;
@@ -24,12 +26,13 @@ public class ReelsController : MonoBehaviour, ISpinState
 
     void Start()
     {
+        _dataService = new JsonDataService();
         _spinhandler.NextSpinResultConcluded += SetReelsTarget;
         foreach (var reel in _reels)
         {
-            reel.Initialize(JsonSaver.LoadData<Dictionary<int, SlotSymbolData>>(JsonSaver.SYMBOL_DATA_PATH));
+            reel.Initialize(_dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH));
         }
-    }
+    }   
     private async UniTask StopReels()
     {
         await UniTask.WaitForSeconds(_totalSpinDuration);

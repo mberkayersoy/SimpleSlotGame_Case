@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
+using Zenject;
 
 public class ResultGeneratorWindow : EditorWindow
 {
@@ -13,6 +14,7 @@ public class ResultGeneratorWindow : EditorWindow
     private string _newResultID = "";
     private int _newResultChancePer = 0;
     private const int VALID_RESULT_LENGTH = 3;
+    private IDataService _dataService = new JsonDataService();
 
     [MenuItem("Slot Tools/Create Result")]
     public static void Init()
@@ -22,8 +24,8 @@ public class ResultGeneratorWindow : EditorWindow
     }
     private void OnEnable()
     {
-        _symbolDataDic = JsonSaver.LoadData<Dictionary<int, SlotSymbolData>>(JsonSaver.SYMBOL_DATA_PATH);
-        _createdResultsDic = JsonSaver.LoadData<Dictionary<string, ResultData>>(JsonSaver.CREATED_RESULTS_FILE_PATH);
+        _symbolDataDic = _dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH);
+        _createdResultsDic = _dataService.LoadData<Dictionary<string, ResultData>>(GameConstantData.CREATED_RESULTS_FILE_PATH);
     }
 
     private void OnGUI()
@@ -88,7 +90,7 @@ public class ResultGeneratorWindow : EditorWindow
     {
         if (CheckAllResultPercentages())
         {
-            JsonSaver.SaveData(_createdResultsDic, JsonSaver.CREATED_RESULTS_FILE_PATH);
+            _dataService.SaveData(GameConstantData.CREATED_RESULTS_FILE_PATH, _createdResultsDic);
             EditorUtility.DisplayDialog("Results Saved",
                                         "All results have been saved successfully.", "OK");
             AssetDatabase.Refresh();

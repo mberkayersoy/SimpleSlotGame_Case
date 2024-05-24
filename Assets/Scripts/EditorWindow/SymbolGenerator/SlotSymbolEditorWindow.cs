@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Zenject;
 
 public class SlotSymbolEditorWindow : EditorWindow
 {
@@ -11,7 +12,7 @@ public class SlotSymbolEditorWindow : EditorWindow
     private string _newName = "";
     private string _newSharpSpritePath = "";
     private string _newBlurSpritePath = "";
-
+    private IDataService _dataService = new JsonDataService();
     [MenuItem("Slot Tools/Create Slot Symbol")]
     public static void Init()
     {
@@ -19,7 +20,7 @@ public class SlotSymbolEditorWindow : EditorWindow
     }
     private void OnEnable()
     {
-        _symbolDataDictionary = JsonSaver.LoadData<Dictionary<int, SlotSymbolData>>(JsonSaver.SYMBOL_DATA_PATH);
+        _symbolDataDictionary = _dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH);
     }
     private void OnDisable()
     {
@@ -81,7 +82,7 @@ public class SlotSymbolEditorWindow : EditorWindow
 
         if (GUILayout.Button("Save Data"))
         {
-            JsonSaver.SaveData(_symbolDataDictionary, JsonSaver.SYMBOL_DATA_PATH);
+            _dataService.SaveData(GameConstantData.SYMBOL_DATA_PATH, _symbolDataDictionary);
             AssetDatabase.Refresh();
         }
     }

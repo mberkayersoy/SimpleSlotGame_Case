@@ -2,12 +2,14 @@
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
+using Zenject;
 
 public class ShowResultsWindow : EditorWindow
 {
     private ResultData[] _spinResults;
     private Vector2 scrollPosition;
     private int _currentSpin;
+    private IDataService _dataService = new JsonDataService();
     [MenuItem("Slot Tools/Show Results")]
     public static void Init()
     {
@@ -16,8 +18,8 @@ public class ShowResultsWindow : EditorWindow
 
     private void OnEnable()
     {
-        _spinResults = JsonSaver.LoadData<ResultData[]>(JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
-        _currentSpin = JsonSaver.LoadData<int>(JsonSaver.CURRENT_SPIN_FILE_PATH);
+        _spinResults = _dataService.LoadData<ResultData[]>(GameConstantData.ALL_SPIN_RESULTS_FILE_PATH);
+        _currentSpin = _dataService.LoadData<int>(GameConstantData.CURRENT_SPIN_FILE_PATH);
     }
 
     private void OnGUI()

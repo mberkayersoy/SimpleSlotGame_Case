@@ -8,12 +8,10 @@ public class ResultGenerator
     private ResultData[] _allSpinResults = new ResultData[100];
     private Dictionary<int, (int, int)[]> _perToIntervalDict = new Dictionary<int, (int, int)[]>();
     private Dictionary<string, ResultData> _createdResultsDic;
-
     public ResultData[] AllSpinResults { get => _allSpinResults; set => _allSpinResults = value; }
-
-    public ResultGenerator()
+    public ResultGenerator(Dictionary<string, ResultData> createdResults)
     {
-        _createdResultsDic = JsonSaver.LoadData<Dictionary<string, ResultData>>(JsonSaver.CREATED_RESULTS_FILE_PATH);
+        _createdResultsDic = createdResults;
         Initialize();
     }
     private void Initialize()
@@ -45,7 +43,6 @@ public class ResultGenerator
         {
             PlaceResults(result.Value);
         }
-        JsonSaver.SaveData(_allSpinResults, JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
         _indexes = null;
     }
     private void PlaceResults(ResultData result)

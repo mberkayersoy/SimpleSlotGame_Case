@@ -1,4 +1,5 @@
 using System;
+
 public class SpinController : ISpinHandler
 {
     private int _currentSpin;
@@ -6,26 +7,27 @@ public class SpinController : ISpinHandler
 
     public event Action<ResultData> NextSpinResultConcluded;
     public event Action AllSpinResultsDone;
-
+    private IDataService _dataService;
     public SpinController()
     {
+        _dataService = new JsonDataService();
         LoadSavedData();
     }
     public void OnNextSpinResult()
     {
         SetCurrentSpin();
         NextSpinResultConcluded?.Invoke(_spinResults[_currentSpin]);
-        JsonSaver.SaveData(_currentSpin, JsonSaver.CURRENT_SPIN_FILE_PATH);
+        _dataService.SaveData(GameConstantData.CURRENT_SPIN_FILE_PATH, _currentSpin);
     }
     private void SetCurrentSpin()
     {
         _currentSpin++;
-        if (_currentSpin > _spinResults.Length - 1)
+        if (_currentSpin > _spinResults.Length)
         {
             AllSpinResultsDone?.Invoke();
         }
     }
-    public void SetNewSpinResults(ResultData[] newSpinResults, int currentSpin = -1)
+    public void SetSpinResults(ResultData[] newSpinResults, int currentSpin = -1)
     {
         _spinResults = newSpinResults;
         _currentSpin = currentSpin;
@@ -34,12 +36,13 @@ public class SpinController : ISpinHandler
 
     private void LoadSavedData()
     {
-        _spinResults = JsonSaver.LoadData<ResultData[]>(JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
-        _currentSpin = JsonSaver.LoadData<int>(JsonSaver.CURRENT_SPIN_FILE_PATH);
+        _spinResults = _dataService.LoadData<ResultData[]>(GameConstantData.ALL_SPIN_RESULTS_FILE_PATH);
+        _currentSpin = _dataService.LoadData<int>(GameConstantData.CURRENT_SPIN_FILE_PATH);
     }
     private void SaveCurrentData()
     {
-        JsonSaver.SaveData(_spinResults, JsonSaver.ALL_SPIN_RESULTS_FILE_PATH);
-        JsonSaver.SaveData(_currentSpin, JsonSaver.CURRENT_SPIN_FILE_PATH);
+        _dataService.SaveData(GameConstantData.ALL_SPIN_RESULTS_FILE_PATH, _spinResults);
+        _dataService.SaveData(GameConstantData.CURRENT_SPIN_FILE_PATH, _currentSpin);
     }
+
 }

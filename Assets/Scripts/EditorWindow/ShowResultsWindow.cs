@@ -17,8 +17,8 @@ public class ShowResultsWindow : EditorWindow
 
     private void OnEnable()
     {
-        _spinResults = _dataService.LoadData<ResultData[]>(GameConstantData.ALL_SPIN_RESULTS_FILE_PATH);
-        _currentSpin = _dataService.LoadData<int>(GameConstantData.CURRENT_SPIN_FILE_PATH);
+        _spinResults = _dataService.LoadData<ResultData[]>(GameConstantData.ALL_SPIN_RESULTS_FILE_PATH, false);
+        _currentSpin = _dataService.LoadData<int>(GameConstantData.CURRENT_SPIN_FILE_PATH, false);
     }
 
     private void OnGUI()

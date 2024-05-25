@@ -53,6 +53,5 @@ public class ReelBehaviour : MonoBehaviour
             symbol.SetSlowDown(SLOW_DOWN_FACTOR, slowDownDuration).Forget();
         }
         await UniTask.WaitForSeconds(slowDownDuration);
-        StopSpinAtTarget().Forget();
     }
 }

@@ -1352,7 +1352,7 @@ MonoBehaviour:
   - {fileID: 1202134469}
   - {fileID: 1671021452}
   - {fileID: 2131570905}
-  _totalSpinDuration: 1
+  _spinDurationBeforeStop: 1.5
   _stopDelayBetweenReels: 0.1
   _reelSymbolsTweenDuration: 0.025
 --- !u!1 &1494072018

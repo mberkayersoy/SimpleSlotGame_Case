@@ -19,7 +19,7 @@ public class SlotSymbolEditorWindow : EditorWindow
     }
     private void OnEnable()
     {
-        _symbolDataDictionary = _dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH);
+        _symbolDataDictionary = _dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH, true);
     }
     private void OnDisable()
     {
@@ -81,7 +81,7 @@ public class SlotSymbolEditorWindow : EditorWindow
 
         if (GUILayout.Button("Save Data"))
         {
-            _dataService.SaveData(GameConstantData.SYMBOL_DATA_PATH, _symbolDataDictionary);
+            _dataService.SaveData(GameConstantData.SYMBOL_DATA_PATH, _symbolDataDictionary, true);
             AssetDatabase.Refresh();
         }
     }

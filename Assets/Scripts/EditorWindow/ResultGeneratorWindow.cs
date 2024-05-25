@@ -24,8 +24,8 @@ public class ResultGeneratorWindow : EditorWindow
     }
     private void OnEnable()
     {
-        _symbolDataDic = _dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH);
-        _createdResultsDic = _dataService.LoadData<Dictionary<string, ResultData>>(GameConstantData.CREATED_RESULTS_FILE_PATH);
+        _symbolDataDic = _dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH, true);
+        _createdResultsDic = _dataService.LoadData<Dictionary<string, ResultData>>(GameConstantData.CREATED_RESULTS_FILE_PATH, true);
     }
 
     private void OnGUI()
@@ -90,7 +90,7 @@ public class ResultGeneratorWindow : EditorWindow
     {
         if (CheckAllResultPercentages())
         {
-            _dataService.SaveData(GameConstantData.CREATED_RESULTS_FILE_PATH, _createdResultsDic);
+            _dataService.SaveData(GameConstantData.CREATED_RESULTS_FILE_PATH, _createdResultsDic, true);
             EditorUtility.DisplayDialog("Results Saved",
                                         "All results have been saved successfully.", "OK");
             AssetDatabase.Refresh();

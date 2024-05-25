@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public class ReelsController : MonoBehaviour, ISpinState
 {
     [SerializeField] private ReelBehaviour[] _reels;
-    [SerializeField] private float _totalSpinDuration;
+    [SerializeField] private float _spinDurationBeforeStop;
     [SerializeField, Range(0f, 0.1f)] private float _stopDelayBetweenReels = 0.1f;
     [SerializeField] private float _reelSymbolsTweenDuration;
 
@@ -30,12 +30,12 @@ public class ReelsController : MonoBehaviour, ISpinState
         _spinhandler.NextSpinResultConcluded += SetReelsTarget;
         foreach (var reel in _reels)
         {
-            reel.Initialize(_dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH));
+            reel.Initialize(_dataService.LoadData<Dictionary<int, SlotSymbolData>>(GameConstantData.SYMBOL_DATA_PATH, true));
         }
     }   
     private async UniTask StopReels()
     {
-        await UniTask.WaitForSeconds(_totalSpinDuration);
+        await UniTask.WaitForSeconds(_spinDurationBeforeStop);
 
         foreach (var reel in _reels)
         {
@@ -51,16 +51,12 @@ public class ReelsController : MonoBehaviour, ISpinState
                     float randomDelay = Random.Range(MIN_DELAY_FOR_LAST_REAL, MAX_DELAY_FOR_LAST_REAL);
                     await reel.SlowDownSymbols(randomDelay);
                 }
-                else
-                {
-                    await reel.StopSpinAtTarget();
-                }
+                await reel.StopSpinAtTarget();
             }
         }
         // Broadcast spin progress finish.
         SpinFinished?.Invoke();
     }
-
     private async UniTaskVoid StartReelsMovement()
     {
         SpinStarted?.Invoke();

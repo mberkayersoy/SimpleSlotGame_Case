@@ -7,13 +7,13 @@ public class SlotSymbolBehaviour : MonoBehaviour
     [SerializeField] private Sprite _sharpSprite;
     [SerializeField] private Sprite _blurSprite;
     [SerializeField] private int _symbolID;
-    public float _targetY;
     private Transform _bottomTarget;
     private Transform _upperTarget;
     private SpriteRenderer _spriteRenderer;
     private Tween _spinTween;
     private bool _isSpinning;
     private float _tweenTimeScale;
+    public float _targetY;
     public int SymbolID { get => _symbolID; private set => _symbolID = value; }
     public float TargetY { get => _targetY; set => _targetY = value; }
 

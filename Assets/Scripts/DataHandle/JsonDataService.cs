@@ -7,9 +7,9 @@ public class JsonDataService : IDataService
 {
     private const string EXTENSION = ".json";
 
-    public T LoadData<T>(string filePath)
+    public T LoadData<T>(string filePath, bool isGameData = false)
     {
-        string path = GetRelativePath(filePath);
+        string path = GetRelativePath(filePath, isGameData);
         if (File.Exists(path))
         {
             T data = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
@@ -22,15 +22,23 @@ public class JsonDataService : IDataService
         }
     }
 
-    private string GetRelativePath(string filePath)
+    private string GetRelativePath(string filePath, bool isGameData)
     {
-        string path = Application.persistentDataPath + "/" + filePath + EXTENSION;
+        string path;
+        if (isGameData)
+        {
+            path = GameConstantData.GAME_DATA_PATH + "/" + filePath + EXTENSION;
+        }
+        else
+        {
+            path = GameConstantData.PLAYER_DATA_PATH + "/" + filePath + EXTENSION;
+        }
         return path;
     }
 
-    public void SaveData<T>(string filePath, T data)
+    public void SaveData<T>(string filePath, T data, bool isGameData = false)
     {
-        string path = GetRelativePath(filePath);
+        string path = GetRelativePath(filePath, isGameData);
         try
         {
             File.WriteAllText(path, JsonConvert.SerializeObject(data));
@@ -40,9 +48,9 @@ public class JsonDataService : IDataService
             Debug.LogError(e.Message);
         }
     }
-    public bool CheckFileExistince(string filePath)
+    public bool CheckFileExistince(string filePath, bool isGameData = false)
     {
-        string path = GetRelativePath(filePath);
+        string path = GetRelativePath(filePath, isGameData);
 
         if (File.Exists(path))
         {

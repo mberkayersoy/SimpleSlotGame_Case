@@ -1,0 +1,19 @@
+{
+    "name": "SlotMachine",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:6ac40709a608c4744aec78ee42fe5239",
+        "GUID:60de74ac1eef7964fa2feeea73f871ad",
+        "GUID:15b16ceb653b18644bfefb837651c4a9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

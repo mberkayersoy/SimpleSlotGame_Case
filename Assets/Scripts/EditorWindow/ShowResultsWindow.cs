@@ -2,7 +2,6 @@
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
-using Zenject;
 
 public class ShowResultsWindow : EditorWindow
 {

@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using UnityEngine;
 
 public class ResultGeneratorTest
 {
-    private Dictionary<string, ResultData> _testResults;
     private int _totalSpin = 100;
+    private Dictionary<string, ResultData> _testResults;
 
     [SetUp]
     public void InitializeData()
@@ -36,7 +35,7 @@ public class ResultGeneratorTest
     [Test]
     public void AllIndexesUsed_Test()
     {
-        ResultGenerator resultGenerator = new ResultGenerator(_testResults);
+        var resultGenerator = new ResultGenerator(_testResults);
         var placedIndex = -1;
         for (int i = 0; i < resultGenerator.Indexes.Length; i++)
         {
@@ -47,7 +46,7 @@ public class ResultGeneratorTest
     [Test]
     public void AllResultsUsed_Test()
     {
-        ResultGenerator resultGenerator = new ResultGenerator(_testResults);
+        var resultGenerator = new ResultGenerator(_testResults);
 
         foreach (var result in _testResults.Values)
         {
@@ -58,7 +57,7 @@ public class ResultGeneratorTest
     [Test]
     public void AllSpinResultNotNull_Test()
     {
-        ResultGenerator resultGenerator = new ResultGenerator(_testResults);
+        var resultGenerator = new ResultGenerator(_testResults);
 
         Assert.IsFalse(resultGenerator.AllSpinResults.Any(result => result == null));
     }
@@ -66,67 +65,59 @@ public class ResultGeneratorTest
     [Test]
     public void CalculateSpinIntervals_Length_Test()
     {
-        var generator = new ResultGenerator(_testResults);
-        var testCases = _testResults.Select(result => result.Value.ChancePer).ToArray();
+        var resultGenerator = new ResultGenerator(_testResults);
+        var testCaseChancePers = _testResults.Select(result => result.Value.ChancePer).ToArray();
 
-        foreach (var percentage in testCases)
+        foreach (var percentage in testCaseChancePers)
         {
-            var actual = CalculateSpinIntervals(percentage, _totalSpin);
+            var intervals = resultGenerator.CalculateSpinIntervals(percentage, _totalSpin);
 
-            Assert.That(actual.Length, Is.EqualTo(percentage));
+            Assert.That(intervals.Length, Is.EqualTo(percentage));
         }
     }
 
     [Test]
     public void CalculateSpinIntervals_Sum_Test()
     {
-        var generator = new ResultGenerator(_testResults);
-        var testCases = _testResults.Select(result => result.Value.ChancePer).ToArray();
+        var resultGenerator = new ResultGenerator(_testResults);
+        var testCaseChancePers = _testResults.Select(result => result.Value.ChancePer).ToArray();
 
-        foreach (var percentage in testCases)
+        foreach (var percentage in testCaseChancePers)
         {
-            var actual = CalculateSpinIntervals(percentage, _totalSpin);
+            var intervals = resultGenerator.CalculateSpinIntervals(percentage, _totalSpin);
 
-            Assert.That(actual.Sum(interval => interval.Item2 - interval.Item1 + 1), Is.EqualTo(_totalSpin));
+            Assert.That(intervals.Sum(interval => interval.Item2 - interval.Item1 + 1), Is.EqualTo(_totalSpin));
         }
     }
 
     [Test]
-    public void CalculateSpinIntervals_Elements_Test()
+    public void CalculateSpinIntervals_Validity_Test()
     {
-        var generator = new ResultGenerator(_testResults);
-        var testCases = _testResults.Select(result => result.Value.ChancePer).ToArray();
+        var resultGenerator = new ResultGenerator(_testResults);
 
-        foreach (var percentage in testCases)
+        foreach (var result in _testResults.Values)
         {
-            var expected = generator.CalculateSpinIntervals(percentage);
-            var actual = CalculateSpinIntervals(percentage, _totalSpin);
+            int percentage = result.ChancePer;
 
-            for (int i = 0; i < actual.Length; i++)
+            var resultIntervals = resultGenerator.CalculateSpinIntervals(percentage, _totalSpin);
+
+            int expectedIntervalLength = _totalSpin / percentage;
+            int expectedRemainingSpin = _totalSpin % percentage;
+            int expectedStartIndex = 0;
+
+            for (int i = 0; i < resultIntervals.Length; i++)
             {
-                Assert.AreEqual(expected[i], actual[i]);
+                int expectedEndIndex = expectedStartIndex + expectedIntervalLength - 1;
+
+                if (expectedRemainingSpin > 0)
+                {
+                    expectedEndIndex++;
+                    expectedRemainingSpin--;
+                }
+
+                Assert.AreEqual((expectedStartIndex, expectedEndIndex), resultIntervals[i]);
+                expectedStartIndex = expectedEndIndex + 1;
             }
         }
     }
-
-    private (int, int)[] CalculateSpinIntervals(int percentage, int totalSpins)
-    {
-        (int, int)[] resultIntervals = new (int, int)[percentage];
-        int spinsPerInterval = totalSpins / percentage;
-        int remainingSpins = totalSpins % percentage;
-        int start = 0;
-        for (int i = 0; i < percentage; i++)
-        {
-            int end = start + spinsPerInterval - 1;
-            if (remainingSpins > 0)
-            {
-                end++;
-                remainingSpins--;
-            }
-            resultIntervals[i] = (start, end);
-            start = end + 1;
-        }
-        return resultIntervals;
-    }
-
 }

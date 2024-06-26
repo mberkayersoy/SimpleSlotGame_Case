@@ -11,7 +11,8 @@ A standard 3x3 slot game.
 - The percentage is automatically divided into periods according to the chance of the spin result. Each Spin result occurs only once in its period.
 - When the player finishes the spin results, new spin results are automatically created and saved.
 
-- https://www.youtube.com/watch?v=YtEuqvmgvqY
+- https://www.youtube.com/watch?v=fpotbeNg0Xs&feature=youtu.be (Game)
+- https://www.youtube.com/watch?v=YtEuqvmgvqY (Editor Windows)
 
 ## ScreenShots
 ![Screenshot 2024-05-17 235945](https://github.com/mberkayersoy/Spyke-Slot-Game/assets/76611569/53ec41ee-0b8f-45b9-be76-6b144dd6d074)
